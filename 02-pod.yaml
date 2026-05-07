@@ -3,7 +3,7 @@ kind: Pod
 
 metadata:
   name: nginx
-  Namespace: expense
+  namespace: expense
 
 spec:
   containers:
