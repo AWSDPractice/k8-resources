@@ -6,4 +6,4 @@ spec:
  #one pod can caintain multiple containers
   containers:
   - name: nginx
-    image:nginx
+    image: nginx
