@@ -1,0 +1,32 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: nginx
+
+spec:
+  selector: # here ABLES ARE USED AS SELECETORS
+    project: expense
+    component: backend
+    environment: dev
+
+ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+---
+kind: Pod
+apiVersion: v1
+
+metadata:
+  name: labels
+  labels: 
+    project: expense
+    component: backend
+    environment: dev
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx    
