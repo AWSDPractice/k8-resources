@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: kvineela/deployment:1.0
+        image: kvineela/deployment:2.0
         ports:
         - containerPort: 80
 
