@@ -27,4 +27,26 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: ebs-claim      
+      claimName: ebs-claim  
+---
+
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: nginx-lb
+
+spec:
+  type: LoadBalancer
+  selector: # here ABLES ARE USED AS SELECETORS
+    project: expense
+    component: backend
+    environment: dev
+    version: "1.0.0"
+    demo: np
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30007
