@@ -31,7 +31,6 @@ spec:
     persistentVolumeClaim:
       claimName: ebs-static
 ---
-
 kind: Service
 apiVersion: v1
 
