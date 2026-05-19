@@ -7,8 +7,8 @@ spec:
   volumeName: ebs-static
   accessModes:
     - ReadWriteOnce
-  resources:
-    requests:
+  resources: 
+    requests: 
       storage: 20Gi
 ---
 apiVersion: v1
